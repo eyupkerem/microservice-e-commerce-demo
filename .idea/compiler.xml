@@ -9,10 +9,18 @@
         <module name="config-server" />
         <module name="discovery" />
       </profile>
+      <profile name="Annotation profile for costumer-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="costumer-service" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="congif-server" target="21" />
-      <module name="costumer-service" target="21" />
       <module name="student-service" target="21" />
     </bytecodeTargetLevel>
   </component>
