@@ -15,14 +15,15 @@ import java.util.HashMap;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(CostumerNotFoundException.class)
-    public ResponseEntity<String> handle(CostumerNotFoundException exp){
+    public ResponseEntity<String> handle(CostumerNotFoundException exp) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(exp.getMsg());
     }
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ErrorResponse> handle(MethodArgumentNotValidException exp){
 
-        var errors= new HashMap<String,String>();
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponse> handle(MethodArgumentNotValidException exp) {
+
+        var errors = new HashMap<String, String>();
 
         exp.getBindingResult().getAllErrors()
                 .forEach(error -> {
@@ -30,12 +31,7 @@ public class GlobalExceptionHandler {
                         errors.put(fieldError.getField(), fieldError.getDefaultMessage());
                     }
                 });
-
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(new ErrorResponse(errors));
     }
-
-
-
-
 }
