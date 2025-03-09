@@ -8,7 +8,7 @@
       <jdbc-url>mongodb://localhost:27017</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="PG_DB" uuid="f00687db-ec3f-4b8e-9370-761a45318b8a">
+    <data-source source="LOCAL" name="POSTGRE_DB" uuid="49f2f6e2-3859-47ce-8dca-d63abb1bdefc">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
