@@ -1,0 +1,25 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/product
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  application:
+    name: order-service
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8070
+application:
+  config:
+    costumer-url: http://localhost:8222/api/v1/costumer
+    product-url: http://localhost:8222/api/v1/products
+    payment-url: http://localhost:8222/api/v1/payment
+
