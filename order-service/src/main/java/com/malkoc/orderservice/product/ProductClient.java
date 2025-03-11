@@ -33,7 +33,7 @@ public class ProductClient {
         ResponseEntity<List<PurchaseResponse>> responseEntity = restTemplate
                 .exchange(productUrl + "/purchase" , POST , requestEntity , responseType);
         if (responseEntity.getStatusCode().isError()){
-            throw new BusinessException("Error occuured while processing the produts purchase :: " + responseEntity.getStatusCode());
+            throw new BusinessException("Error occurred while processing the products purchase :: " + responseEntity.getStatusCode());
         }
         return responseEntity.getBody();
     }

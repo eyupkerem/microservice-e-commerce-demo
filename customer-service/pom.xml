@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.malkoc</groupId>
-    <artifactId>costumer-service</artifactId>
+    <artifactId>customer-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>costumer-service</name>
     <description>costumer-service</description>
